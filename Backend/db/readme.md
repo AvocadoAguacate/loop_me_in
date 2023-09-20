@@ -1,0 +1,1 @@
+# Design of DB in Firestore
