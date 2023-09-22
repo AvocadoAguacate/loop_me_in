@@ -5,7 +5,7 @@ export default function Layout() {
     <Stack.Screen
       name="index"
       options={{
-        headerShown: false,
+        headerShown: true,
       }}
     />
     <Stack.Screen

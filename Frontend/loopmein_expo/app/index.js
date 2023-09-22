@@ -67,12 +67,12 @@ export default function LogIn() {
       <Stack.Screen
         options={{
           title: 'Loop me in',
-          headerStyle: { backgroundColor: '#f4511e' },
+          headerStyle: { backgroundColor: '#1282A2' },
           headerTintColor: '#fff',
           headerTitleStyle: {
             fontWeight: 'bold',
           },
-          headerTitle: props => <Text>Loop me in</Text>,
+          headerTitle: props => <Text style={{}}>Loop me in</Text>,
         }}
       />
       <Input
