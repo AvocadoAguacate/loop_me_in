@@ -6,6 +6,7 @@ erDiagram
     int idUser PK
     string name
     string email UK
+    string color
   }
   Groups {
     int idGroup PK
@@ -13,15 +14,28 @@ erDiagram
     string name 
     datetime postTime
   }
+  Users ||--||Groups: ""
   usersXgroups{
     int idUXG PK
     int idGroup FK
     int idUser FK
     int level 
   }
-  Users ||--||Groups: ""
   Users }|--|{  usersXgroups: ""
   Groups }|--|{  usersXgroups: ""
+  Friends {
+    int idFriend PK
+    int owner FK
+    int friend FK
+    int idType FK
+    datetime postTime
+  }
+  Users }|--|{  Friends: ""
+  FriendsTypes{
+    int idType PK
+    string name
+  }
+  Friends }|--||  FriendsTypes: ""
   Appointments{
     int idApointment PK
     int idUser FK
