@@ -98,5 +98,15 @@ erDiagram
   Attendance ||--|{ History: ""
   Attendance ||--|| ResponseTypes: ""
   Attendance }|--|{ Users: ""
+  Invitations{
+    int idInvitation PK
+    int sender FK
+    int guest FK
+    int idResponse FK
+    datetime postTime
+  }
+  Invitations }|--|| ResponseTypes: ""
+  Invitations }|--|{ Groups: ""
+  Invitations }|--|{ Users: ""
 ```
 ## something 
