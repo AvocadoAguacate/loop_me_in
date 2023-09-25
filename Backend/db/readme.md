@@ -14,7 +14,7 @@ erDiagram
     string name 
     datetime postTime
   }
-  Users ||--||Groups: ""
+  Users ||--|{Groups: ""
   usersXgroups{
     int idUXG PK
     int idGroup FK
@@ -109,4 +109,21 @@ erDiagram
   Invitations }|--|{ Groups: ""
   Invitations }|--|{ Users: ""
 ```
-## something 
+## Users
+Used to ...
+```mermaid
+erDiagram
+  Users{
+    int idUser PK
+    string name
+    string email UK
+    string color
+  }
+  Users ||--|{Groups: "Create"
+  Users }|--|{  usersXgroups: "Belong"
+  Users }|--|{  Friends: "Adds"
+  Users ||--o{ Appointments: "Have"
+  Users ||--|{ Shedules: "Have"
+  Attendance }|--|{ Users: "Reply"
+  Invitations }|--|{ Users: "Reply"
+```
